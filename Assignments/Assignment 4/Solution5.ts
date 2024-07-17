@@ -1,8 +1,7 @@
-/* 6. Write a TypeScript program that creates an abstract class GeometricShape with properties like name and abstract methods for calculating area
-     and perimeter. Implement derived classes for specific shapes (e.g., Circle, Rectangle, Triangle) that extend GeometricShape and provide
-       concrete implementations for area and perimeter calculations.   */
+//5. Write a program to demonstrate the need for upcasting.
 
-       abstract class GeometricShape{
+
+       abstract class Shapes{
 
         name:string;
 
@@ -15,7 +14,7 @@
         abstract CalculatePerimeter():number
        }
 
-       class CircleDerived extends GeometricShape{
+       class CircleDerivedClass extends Shapes{
           radius:number
 
           constructor(name:string,radius:number){
@@ -38,7 +37,7 @@
 
        }
 
-       class RectangleDerived extends GeometricShape{
+       class RectangleDerivedClass extends Shapes{
 
         width:number;
         height:number;
@@ -67,7 +66,7 @@
 
        }
 
-       class TriangleDerived extends GeometricShape{
+       class TriangleDerivedlass extends Shapes{
         sideA:number;
         sideB:number;
         sideC:number;
@@ -100,15 +99,18 @@
 
        }
 
-       let objDerivedCircle:CircleDerived = new CircleDerived("Circle", 7)
-       console.log("AREA OF Circle is ", objDerivedCircle.CalculateArea())
-       console.log("Perimeter of Circle is ",objDerivedCircle.CalculatePerimeter())
+       let objabstractShapes:Shapes = new CircleDerivedClass("Circle", 4)
+       console.log("AREA OF Circle is ", objabstractShapes.CalculateArea())
+       console.log("Perimeter of Circle is ",objabstractShapes.CalculatePerimeter())
 
-       let objDerivedRectangle:RectangleDerived = new RectangleDerived("Rectangle", 7, 8)
-       console.log("AREA OF Rectangle is ", objDerivedRectangle.CalculateArea())
-       console.log("Perimeter of Rectangle is ",objDerivedRectangle.CalculatePerimeter())
+       objabstractShapes = new RectangleDerivedClass("Rectangle", 6,5)
+       console.log("AREA OF Rectangle is ", objabstractShapes.CalculateArea())
+       console.log("Perimeter of Rectangle is ",objabstractShapes.CalculatePerimeter())
 
-       let objDerivedTriangle:TriangleDerived = new TriangleDerived("Triangle", 3,4,5)
-      console.log("AREA OF TRIANGLE is "+  objDerivedTriangle.CalculateArea())
-      console.log("Perimeter of Triangle is "+ objDerivedTriangle.CalculatePerimeter())
+       objabstractShapes = new TriangleDerivedlass("Triangle",3,4,5)
+       console.log("AREA OF Triangle is ", objabstractShapes.CalculateArea())
+       console.log("Perimeter of Triangle is ",objabstractShapes.CalculatePerimeter())
+
+
+
 

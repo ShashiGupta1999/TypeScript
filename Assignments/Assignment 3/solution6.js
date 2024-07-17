@@ -79,8 +79,6 @@ console.log("Perimeter of Circle is ", objDerivedCircle.CalculatePerimeter());
 var objDerivedRectangle = new RectangleDerived("Rectangle", 7, 8);
 console.log("AREA OF Rectangle is ", objDerivedRectangle.CalculateArea());
 console.log("Perimeter of Rectangle is ", objDerivedRectangle.CalculatePerimeter());
-var objDerivedTriangle = new TriangleDerived("Triangle", 3, 3, 5);
-//  console.log(objDerivedTriangle.displayTriangleArea())
-//  console.log(objDerivedTriangle.displayTrainglePeri())
-console.log("AREA OF TRIANGLE is ", objDerivedTriangle.CalculateArea());
-console.log("Perimeter of Triangle is ", objDerivedTriangle.CalculatePerimeter());
+var objDerivedTriangle = new TriangleDerived("Triangle", 3, 4, 5);
+console.log("AREA OF TRIANGLE is " + objDerivedTriangle.CalculateArea());
+console.log("Perimeter of Triangle is " + objDerivedTriangle.CalculatePerimeter());
